@@ -51,25 +51,6 @@
     mix-blend-mode: normal;
   }
 }
-.filepond--file-poster-wrapper {
-  /* no interaction */
-  pointer-events: none;
-
-  /* have preview fill up all available space */
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 100%;
-  margin: 0;
-
-  /* radius is .05em less to prevent the panel background color from shining through */
-  border-radius: 0.45em;
-  overflow: hidden;
-
-  /* this seems to prevent Chrome from redrawing this layer constantly */
-  background: rgba(0, 0, 0, 0.01);
-}
 .filepond--file-poster {
   position: relative;
   z-index: 1;
@@ -92,6 +73,25 @@
   margin: 0 auto;
   display: block;
   will-change: transform;
+}
+.filepond--file-poster-wrapper {
+  /* no interaction */
+  pointer-events: none;
+
+  /* have preview fill up all available space */
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin: 0;
+
+  /* radius is .05em less to prevent the panel background color from shining through */
+  border-radius: 0.45em;
+  overflow: hidden;
+
+  /* this seems to prevent Chrome from redrawing this layer constantly */
+  background: rgba(0, 0, 0, 0.01);
 }
 .filepond--root[data-style-panel-layout~='integrated']
   .filepond--file-poster-wrapper {

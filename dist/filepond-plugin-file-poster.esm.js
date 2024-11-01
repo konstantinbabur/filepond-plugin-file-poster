@@ -169,20 +169,20 @@ const drawTemplate = (canvas, width, height, color, alphaTarget) => {
   ctx.restore();
 };
 
-const hasNavigator = typeof navigator !== 'undefined';
+const hasDocument = typeof document !== 'undefined';
 
 const width = 500;
 const height = 200;
 
-const overlayTemplateShadow = hasNavigator && document.createElement('canvas');
-const overlayTemplateError = hasNavigator && document.createElement('canvas');
-const overlayTemplateSuccess = hasNavigator && document.createElement('canvas');
+const overlayTemplateShadow = hasDocument && document.createElement('canvas');
+const overlayTemplateError = hasDocument && document.createElement('canvas');
+const overlayTemplateSuccess = hasDocument && document.createElement('canvas');
 
 let itemShadowColor = [40, 40, 40];
 let itemErrorColor = [196, 78, 71];
 let itemSuccessColor = [54, 151, 99];
 
-if (hasNavigator) {
+if (hasDocument) {
   drawTemplate(overlayTemplateShadow, width, height, itemShadowColor, 0.85);
   drawTemplate(overlayTemplateError, width, height, itemErrorColor, 1);
   drawTemplate(overlayTemplateSuccess, width, height, itemSuccessColor, 1);
